@@ -47,7 +47,6 @@ build: transpile
 	if [ ! -d "cjs" ]; then mkdir cjs; fi
 	cp -r src/* cjs
 	rollup -c rollup.config.js
-	echo '{"type": "module"}' > esm/package.json
 	cp types/index.d.ts esm/client.d.ts
 	cp types/index.d.ts esm/server.d.ts
 
